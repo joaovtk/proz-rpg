@@ -42,7 +42,7 @@ function criarPersonagemAvancado(nome, classe, atributos){
                 character.especial.nome = "Flecha da Precisão";
                 break;
             default:
-                throw Error("Valores de classe invalida ou incorreta...");
+                alert("Classe Invalida");
         }
         if(character.classe && character.atk && character.hp){
             let points = 0;
@@ -70,9 +70,11 @@ function criarPersonagemAvancado(nome, classe, atributos){
                     character.especial.defesa += character.points.inteligencia;
                 }
                 return character;
+            }else {
+                alert("Distribuição de pontos incorretas tente novamente");
             }
         }else {
-            throw Error("Valores personagem invalidos ou alterados...");
+            throw Error("Valores Invalidos")
         }
     }
 }
